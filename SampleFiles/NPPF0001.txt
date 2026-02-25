@@ -1,0 +1,186 @@
+ 00r88g75b88
+ 00r100g88b88 "__anonymous_block"
+ P1_2025_10_28_08_39_34 BEGIN
+ -- display a message to indicate the records have been saved
+ -- force status to be set
+    next_field;
+    previous_field;
+ IF :System.Form_Status = 'CHANGED' THEN 
+     Commit_Form; 
+ --  the NPP system requires an alert box for commit messages - don't know why!
+     if get_application_property(current_form_name) LIKE 'xxx%' then
+        msg_alert('Your changes have been written to the database.','I',false);
+        commit_message;
+     end if;
+ else
+ --  the NPP system requires an alert box for commit messages - don't know why!
+     if get_application_property(current_form_name) LIKE 'xxx%' then
+        msg_alert('No changes to write to the database','I',false);
+        message('No changes to write to the database');
+     end if;
+ KEY-COMMIT (Form) /Lreference MSG_ALERT /Lreference COMMIT_MESSAGE "<anonymous>":System.Form_Status""
+ plsql_optimize_level"plsql_code_type"plsql_debug"nls_length_semantics"plsql_warnings"plsql_ccflags"plscope_settings"
+ 2"INTERPRETED"TRUE"BYTE"BYTE""IDENTIFIERS:NONE"
+ Your changes have been written to the database. No changes to write to the database
+ "__anonymous_block"
+ NRCO_CANVAS NRCO_CANVAS NRCO_WINDOW
+ P3_2025_10_28_08_39_34 BEGIN
+ :/* This trigger is used to display the list of values when the mouse
+    is doubled clicked on a field that has a LOV associated with it.
+ if get_item_property(:system.cursor_item,ITEM_TYPE) = 'TEXT ITEM' then
+    if get_item_property(:system.cursor_item,LIST) = 'TRUE' then
+       list_values;
+    end if;
+ WHEN-MOUSE-DOUBLECLICK (Form) "<anonymous>":system.cursor_item""
+ plsql_optimize_level"plsql_code_type"plsql_debug"nls_length_semantics"plsql_warnings"plsql_ccflags"plscope_settings"
+ 2"INTERPRETED"TRUE"BYTE"BYTE""IDENTIFIERS:NONE"
+ "__anonymous_block"
+ NRWA_CANVAS NRWA_CANVAS NRWA_WINDOW
+ transparent
+ TEXTSTR439 TEXTSTR439 WORK ALLOCATION
+ P0_2025_10_28_08_39_34 BEGIN
+ declare
+  ERR_VAL NUMBER(5)     := ERROR_CODE;
+ begin
+  IF ERR_VAL=40401 THEN
+       null;
+     trap_error_code;
+   END IF;
+ ON-ERROR (Form) /Lreference TRAP_ERROR_CODE
+ plsql_optimize_level"plsql_code_type"plsql_debug"nls_length_semantics"plsql_warnings"plsql_ccflags"plscope_settings"
+ 2"INTERPRETED"TRUE"BYTE"BYTE""IDENTIFIERS:NONE" "__anonymous_block"
+ FALSE NPP2 "__anonymous_block"
+ qFRM50_BUFFER table contains user's buffer ,5_ROSATTRIBS class attributes )thROSLFDESC ros lf descrip
+ 'NDROSOBJMAP ros name->id ROSSTRINGS tk2 uiStrings ROSSTRUCTS struct typesÍ« ROSTK2RESV tk2 reserved TOOL_MODULE table contains information about different module VG_COLOR VG_COLOR )VG_COLOR ITEMID )VG_COLOR CELLID +VG_COLOR NAME_SET -VG_COLOR NAME_LENGTH -VG_COLOR COLOR_NAME 'VG_COLOR GREEN 'VG_COLOR BLUE "__anonymous_block"
+ 00r88g75b88
+ 00r100g88b88 "__anonymous_block" P2_2025_10_28_08_39_34 BEGIN
+ when_window_is_activated;
+ WHEN-WINDOW-ACTIVATED (Form) $/Lreference WHEN_WINDOW_IS_ACTIVATED
+plsql_optimize_level"plsql_code_type"plsql_debug"nls_length_semantics"plsql_warnings"plsql_ccflags"plscope_settings"
+ 2"INTERPRETED"TRUE"BYTE"BYTE""IDENTIFIERS:NONE" "__anonymous_block" "__anonymous_block"
+ FALSE NPP2 "__anonymous_block"
+ P4_2025_10_28_08_39_34 BEGIN
+ xbegin
+ /* sets the display type for current records. */
+    set_current_record_attribute;
+    check_if_query_only;
+ PRE-BLOCK (Form) (/Lreference SET_CURRENT_RECORD_ATTRIBUTE
+ P241_2025_10_28_08_39_34
+ NPP2.NPP_INITIALS NPP2.NPP_INITIALS
+ NPP_INITIALS
+ P241_2025_10_28_08_39_34
+ NPP2.NPP_FORENAMES NPP2.NPP_FORENAMES
+ NPP_FORENAMES
+ P241_2025_10_28_08_39_34
+ NPP2.NPP_GENDER NPP2.NPP_GENDER
+ NPP_GENDER
+ P241_2025_10_28_08_39_34
+ NPP2.NPP_DATE_OF_BIRTH NPP2.NPP_DATE_OF_BIRTH
+ NPP_DATE_OF_BIRTH
+ P241_2025_10_28_08_39_34
+ NPP2.NBT_NADD_POSTCODE NPP2.NBT_NADD_POSTCODE
+ NBT_NADD_POSTCODE
+ P244_2025_10_28_08_39_34
+ NAWA.NAWA_UPDATE_DATE NAWA.NAWA_UPDATE_DATE
+ NAWA_UPDATE_DATE
+ P248_2025_10_28_08_39_34
+ NAWA.NAWA_UPDATE_USER NAWA.NAWA_UPDATE_USER
+ NAWA_UPDATE_USER
+ P248_2025_10_28_08_39_34
+ NAWA.NAWA_NPP_ID NAWA.NAWA_NPP_ID
+ NAWA_NPP_ID
+ P249_2025_10_28_08_39_34
+ NAWA.NAWA_AT_NUMBER NAWA.NAWA_AT_NUMBER
+ NAWA_AT_NUMBER
+ P249_2025_10_28_08_39_34 P250_2025_10_28_08_39_34 P251_2025_10_28_08_39_34
+ NAWA.NAWA_AC_CODE NAWA.NAWA_AC_CODE
+ NAWA_AC_CODE
+ P249_2025_10_28_08_39_34 P250_2025_10_28_08_39_34 P251_2025_10_28_08_39_34
+ NAWA.NAWA_INSERT_DATE NAWA.NAWA_INSERT_DATE
+ NAWA_INSERT_DATE
+ P249_2025_10_28_08_39_34
+ NAWA.NAWA_INSERT_USER NAWA.NAWA_INSERT_USER
+ NAWA_INSERT_USER
+ P249_2025_10_28_08_39_34
+ NAWA.NBT_AT_NAME NAWA.NBT_AT_NAME
+ NBT_AT_NAME
+ P250_2025_10_28_08_39_34 P251_2025_10_28_08_39_34
+ NAWA.NBT_AC_DESCRIPTION NAWA.NBT_AC_DESCRIPTION
+ NBT_AC_DESCRIPTION
+ P250_2025_10_28_08_39_34 P251_2025_10_28_08_39_34
+ NAWA.NBT_EXTASS NAWA.NBT_EXTASS
+ NBT_EXTASS
+ P250_2025_10_28_08_39_34 P251_2025_10_28_08_39_34
+ NRAV.NRAV_UPDATE_DATE NRAV.NRAV_UPDATE_DATE
+ NRAV_UPDATE_DATE
+ P252_2025_10_28_08_39_34
+ NRAV.NRAV_UPDATE_USER NRAV.NRAV_UPDATE_USER
+ NRAV_UPDATE_USER
+ P252_2025_10_28_08_39_34
+ NRAV.NRAV_NROL_ID NRAV.NRAV_NROL_ID
+ NRAV_NROL_ID
+ P253_2025_10_28_08_39_34
+ NRAV.NRAV_BEWI_ID NRAV.NRAV_BEWI_ID
+ NRAV_BEWI_ID
+ P253_2025_10_28_08_39_34 P254_2025_10_28_08_39_34
+ NRAV.NRAV_INSERT_DATE NRAV.NRAV_INSERT_DATE
+ NRAV_INSERT_DATE
+ P253_2025_10_28_08_39_34
+ NRAV.NRAV_INSERT_USER NRAV.NRAV_INSERT_USER
+ NRAV_INSERT_USER
+ P253_2025_10_28_08_39_34
+ NRAV.NBT_BEWI_FROM_DATE NRAV.NBT_BEWI_FROM_DATE
+ NBT_BEWI_FROM_DATE
+ P254_2025_10_28_08_39_34
+ NRAV.NBT_BEWI_TO_DATE NRAV.NBT_BEWI_TO_DATE
+ NBT_BEWI_TO_DATE
+ P254_2025_10_28_08_39_34
+ NRTR.NRTR_NROL_ID NRTR.NRTR_NROL_ID
+ NRTR_NROL_ID
+ P256_2025_10_28_08_39_34
+ NRTR.NRTR_SECTOR NRTR.NRTR_SECTOR
+ NRTR_SECTOR
+ P256_2025_10_28_08_39_34 P261_2025_10_28_08_39_34
+ NRTR.NRTR_INSERT_DATE NRTR.NRTR_INSERT_DATE
+ NRTR_INSERT_DATE
+ P256_2025_10_28_08_39_34
+ NRTR.NRTR_INSERT_USER NRTR.NRTR_INSERT_USER
+ NRTR_INSERT_USER
+ P256_2025_10_28_08_39_34
+ NRTR.NRTR_NOTES NRTR.NRTR_NOTES
+ NRTR_NOTES
+ P256_2025_10_28_08_39_34
+ NRTR.NRTR_UPDATE_DATE NRTR.NRTR_UPDATE_DATE
+ NRTR_UPDATE_DATE
+ P257_2025_10_28_08_39_34
+ NRTR.NRTR_UPDATE_USER NRTR.NRTR_UPDATE_USER
+ NRTR_UPDATE_USER
+ P257_2025_10_28_08_39_34
+ NRTR.NRTR_FEE_DATE NRTR.NRTR_FEE_DATE
+ NRTR_FEE_DATE
+ P258_2025_10_28_08_39_34 P262_2025_10_28_08_39_34
+ NRTR.NRTR_PAYMENT_IND NRTR.NRTR_PAYMENT_IND
+ NRTR_PAYMENT_IND
+ P262_2025_10_28_08_39_34
+ NRCO.NRCO_NROL_ID NRCO.NRCO_NROL_ID
+ NRCO_NROL_ID
+ P267_2025_10_28_08_39_34
+ NRCO.NRCO_UPDATE_DATE NRCO.NRCO_UPDATE_DATE
+ NRCO_UPDATE_DATE
+ P269_2025_10_28_08_39_34
+ NRCO.NRCO_UPDATE_USER NRCO.NRCO_UPDATE_USER
+ NRCO_UPDATE_USER
+ P269_2025_10_28_08_39_34
+ GLOBAL.FIRST_TIME GLOBAL.FIRST_TIME
+ P278_2025_10_28_08_39_34 NROL.NBT_NRTY_NRWA_DETAIL_TYPE NROL.NBT_NRTY_NRWA_DETAIL_TYPE
+ NBT_NRTY_NRWA_DETAIL_TYPE
+ PR_GET_ROLE_TYPE_DETAIL PR_NRWA_STACKING P176_2025_10_28_08_39_34
+ NROL.NBT_NRTY_REGIONS_IND NROL.NBT_NRTY_REGIONS_IND
+ NBT_NRTY_REGIONS_IND
+ PR_GET_ROLE_TYPE_DETAIL PR_NROL_STACKING
+ NROL.NBT_NRTY_VOCATIONAL_IND NROL.NBT_NRTY_VOCATIONAL_IND
+ NBT_NRTY_VOCATIONAL_IND
+ PR_GET_ROLE_TYPE_DETAIL PR_NROL_STACKING P88_2025_10_28_08_39_34 P89_2025_10_28_08_39_34 P97_2025_10_28_08_39_34
+ NROL.NROL_NRTY_ID NROL.NROL_NRTY_ID
+ NROL_NRTY_ID
+<div id="preview-all"><div class="button" onclick="Sb('W',0)">Show all readable texts in this file...</div></div><div id="preview-all"><div class="button" onclick="Sb('B',0)">Show all bytes of this binary file...</div></div>
